@@ -1,0 +1,90 @@
+/* -----------------------------------------------------------------------------
+
+  TABS COMPONENT
+  
+----------------------------------------------------------------------------- */
+
+.tabs {
+  /**/
+}
+
+/**
+ * Tabs navigation
+ */
+
+.tabs-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs-nav__link {
+  flex: 1;
+  margin-right: 4px;
+  padding: 12px;
+  color: #fff;
+  background-color: $color--neutral-xlight;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.tabs-nav__link:last-child {
+  margin-right: 0;
+}
+
+.tabs-nav__link:hover {
+  color: $color--neutral;
+}
+
+.tabs-nav__link.is-active {
+  color: $color--theme;
+  background-color: $color--neutral-xxlight;
+}
+
+.tabs-nav__link i,
+.tabs-nav__link span {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.tabs-nav__link i {
+  font-size: $font-size--medium;
+}
+
+.tabs-nav__link span {
+  display: none;
+  font-size: $font-size--medium;
+}
+
+@media all and ( min-width: $breakpoint--medium ) {
+
+  .tabs-nav__link i {
+    margin-bottom: 12px;
+    font-size: $font-size--large;
+  }
+
+  .tabs-nav__link span {
+    display: block;
+  }
+
+}
+
+
+/**
+ * Tab
+ */
+
+.tab {
+  display: none;
+  background-color: $color--neutral-xxlight;
+}
+
+.tab.is-active {
+  display: block;
+}
+
+.tab__content {
+  padding: 1.5rem;
+}

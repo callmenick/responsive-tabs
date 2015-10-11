@@ -11,17 +11,20 @@
   var tabs = function(options) {
 
     var el = document.querySelector(options.el);
-    var tabNavigationLinks = el.querySelectorAll('.tabs-nav__link');
-    var tabContentContainers = el.querySelectorAll('.tab');
+    var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
+    var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
     var activeIndex = 0;
 
     /**
      * init
      *
-     * @description Initializes the component by attaching event listeners to
-     *   each of the nav items. Returns nothing.
+     * @description Initializes the component by removing the no-js class from
+     *   the component, and attaching event listeners to each of the nav items.
+     *   Returns nothing.
      */
     var init = function() {
+      el.classList.remove('no-js');
+      
       for (var i = 0; i < tabNavigationLinks.length; i++) {
         var link = tabNavigationLinks[i];
         handleClick(link, i);

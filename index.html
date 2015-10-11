@@ -26,59 +26,59 @@
   <div class="o-container">
 
     <div class="o-section">
-      <div id="tabs" class="tabs">
-        <div class="tabs-nav">
-          <a href="#" class="tabs-nav__link is-active">
+      <div id="tabs" class="c-tabs no-js">
+        <div class="c-tabs-nav">
+          <a href="#" class="c-tabs-nav__link is-active">
             <i class="fa fa-home"></i>
             <span>Home</span>
           </a>
-          <a href="#" class="tabs-nav__link">
+          <a href="#" class="c-tabs-nav__link">
             <i class="fa fa-book"></i>
             <span>Books</span>
           </a>
-          <a href="#" class="tabs-nav__link">
+          <a href="#" class="c-tabs-nav__link">
             <i class="fa fa-heart"></i>
             <span>Favourites</span>
           </a>
-          <a href="#" class="tabs-nav__link">
+          <a href="#" class="c-tabs-nav__link">
             <i class="fa fa-calendar"></i>
             <span>Calendar</span>
           </a>
-          <a href="#" class="tabs-nav__link">
+          <a href="#" class="c-tabs-nav__link">
             <i class="fa fa-cog"></i>
             <span>Settings</span>
           </a>
         </div>
-        <div class="tab is-active">
-          <div class="tab__content">
+        <div class="c-tab is-active">
+          <div class="c-tab__content">
             <h2>Welcome home!</h2>
             <p>Home ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore eveniet consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto voluptatibus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque optio saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam ipsa, odio.</p>
           </div>
         </div>
-        <div class="tab">
-          <div class="tab__content">
+        <div class="c-tab">
+          <div class="c-tab__content">
             <h2>All Books</h2>
             <p>Books ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore eveniet consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto voluptatibus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque optio saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam ipsa, odio.</p>
           </div>
         </div>
-        <div class="tab">
-          <div class="tab__content">
+        <div class="c-tab">
+          <div class="c-tab__content">
             <h2>Your Favourites!</h2>
             <p>Favourites ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore eveniet consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto voluptatibus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque optio saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam ipsa, odio.</p>
           </div>
         </div>
-        <div class="tab">
-          <div class="tab__content">
+        <div class="c-tab">
+          <div class="c-tab__content">
             <h2>Stay Busy</h2>
             <p>Calendar ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore eveniet consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto voluptatibus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque optio saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam ipsa, odio.</p>
           </div>
         </div>
-        <div class="tab">
-          <div class="tab__content">
+        <div class="c-tab">
+          <div class="c-tab__content">
             <h2>Change It Up</h2>
             <p>Settings ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore eveniet consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto voluptatibus!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque optio saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam ipsa, odio.</p>
@@ -102,7 +102,9 @@
 <script src="js/src/tabs.js"></script>
 <script>
   var myTabs = tabs({
-    el: '#tabs'
+    el: '#tabs',
+    tabNavigationLinks: '.c-tabs-nav__link',
+    tabContentContainers: '.c-tab'
   });
 </script>
 

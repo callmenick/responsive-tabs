@@ -14,6 +14,7 @@
     var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
     var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
     var activeIndex = 0;
+    var initCalled = false;
 
     /**
      * init
@@ -23,11 +24,14 @@
      *   Returns nothing.
      */
     var init = function() {
-      el.classList.remove('no-js');
-      
-      for (var i = 0; i < tabNavigationLinks.length; i++) {
-        var link = tabNavigationLinks[i];
-        handleClick(link, i);
+      if (!initCalled) {
+        initCalled = true;
+        el.classList.remove('no-js');
+        
+        for (var i = 0; i < tabNavigationLinks.length; i++) {
+          var link = tabNavigationLinks[i];
+          handleClick(link, i);
+        }
       }
     };
 
@@ -53,7 +57,7 @@
      * @param {Number} index The index of the tab to go to
      */
     var goToTab = function(index) {
-      if (index !== activeIndex) {
+      if (index !== activeIndex && index >= 0 && index <= tabNavigationLinks.length) {
         tabNavigationLinks[activeIndex].classList.remove('is-active');
         tabNavigationLinks[index].classList.add('is-active');
         tabContentContainers[activeIndex].classList.remove('is-active');
@@ -63,9 +67,13 @@
     };
 
     /**
-     * Call init to kick things off
+     * Returns init and goToTab
      */
-    init();
+    return {
+      init: init,
+      goToTab: goToTab
+    };
+
   };
 
   /**

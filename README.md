@@ -36,6 +36,18 @@ Include the link to the JS component and instantiate like this:
 </script>
 ```
 
+To initialize it, make sure you run the `init` method:
+
+```javascript
+myTabs.init();
+```
+
+To go to a specific tab index manually after instantiation, you can use the `goToTab` method which takes an `index` as a parameter. Example:
+
+```javascript
+myTabs.goToTab(3);
+```
+
 ## No JS Fallback
 
 Some simple CSS is provided for a no-js solution. If JS is enabled, the `no-js` class gets removed during instantiation and all works well!

@@ -52,12 +52,14 @@ myTabs.goToTab(3);
 
 Some simple CSS is provided for a no-js solution. If JS is enabled, the `no-js` class gets removed during instantiation and all works well!
 
-## Live Demo
+## Demo
 
 View the live demo [here.](http://callmenick.com/_development/responsive-tabs/)
 
-## License & Copyright
+## Author
 
-Licensed under the [MIT license.](http://www.opensource.org/licenses/mit-license.php)
+Nick Salloum <http://callmenick.com>
 
-Copyright 2014, [Call Me Nick.](http://callmenick.com)
+## License
+
+[MIT](http://www.opensource.org/licenses/mit-license.php)

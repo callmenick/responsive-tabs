@@ -58,7 +58,7 @@ View the live demo [here.](http://callmenick.com/_development/responsive-tabs/)
 
 ## Author
 
-Nick Salloum <http://callmenick.com>
+Nick Salloum <nick@callmenick.com>
 
 ## License
 

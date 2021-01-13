@@ -36,6 +36,8 @@ Include the link to the JS component and instantiate like this:
 </script>
 ```
 
+You can also use `window.tabs` to create a Reponsive Tabs instance.
+
 To initialize it, make sure you run the `init` method:
 
 ```javascript
@@ -46,6 +48,66 @@ To go to a specific tab index manually after instantiation, you can use the `goT
 
 ```javascript
 myTabs.goToTab(3);
+```
+
+## Advanced usage
+
+### Using custom element
+
+You can also pass an already existing element as an option:
+
+```javascript
+var tabsContainer = document.querySelector('#tabs');
+
+var myTabs = window.tabs({
+  el: tabsContainer,
+  tabNavigationLinks: '.c-tabs-nav__link',
+  tabContentContainers: '.c-tab'
+});
+```
+
+### Multiple instances
+
+Using previous example enables the option to create multiple Responsive Tabs instances of same class on the same page:
+
+```javascript
+document.querySelectorAll('.c-tabs').forEach(function (el) {
+  var myTabs = window.tabs({
+    el: el,
+    tabNavigationLinks: '.tab',
+    tabContentContainers: '.tab-content'
+  });
+  myTabs.init();
+});
+```
+
+### Custom classes for active elements
+
+You can also define your own classes for active tab links and contents to match the desired CSS syntax.
+
+Renaming default `is-active` class using `activeClass` option:
+
+```javascript
+var myTabs = tabs({
+  el: '#tabs',
+  tabNavigationLinks: '.c-tabs-nav__link',
+  tabContentContainers: '.c-tab',
+  
+  activeClass: 'c-tab--active'
+});
+```
+
+Assigning different classes for tab links and tab contents using `activeClassLink` and `activeClassContainer` options:
+
+```javascript
+var myTabs = tabs({
+  el: '#tabs',
+  tabNavigationLinks: '.c-tabs-nav__link',
+  tabContentContainers: '.c-tab',
+  
+  activeClassLink: 'c-tabs-nav__link--active',
+  activeClassContainer: 'c-tab--active'
+});
 ```
 
 ## No JS Fallback
